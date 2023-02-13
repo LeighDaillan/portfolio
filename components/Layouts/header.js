@@ -1,12 +1,4 @@
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link } from "react-scroll";
 import { useInView } from "react-intersection-observer";
 
 const Header = function () {
@@ -15,12 +7,12 @@ const Header = function () {
   return (
     <headers
       ref={navRef}
-      className={`fixed w-full ${
+      className={`fixed w-full bg-neutral-900  ${
         navVisible ? "showAnimation ease-in duration-500" : "hideAnimation "
       }`}
     >
-      <nav className="grid grid-cols-2">
-        <ul className="text-base flex justify-between py-5 px-4 max-w-sm font-bold">
+      <nav className="grid md:grid-cols-2 z-10 ">
+        <ul className="text-base  flex justify-between py-5 mx-10 px-4 md:max-w-sm font-bold">
           <li>
             <Link
               to="about"
@@ -34,26 +26,54 @@ const Header = function () {
             </Link>
           </li>
           <li>
-            <a href="#" className="opacity-60 hover:opacity-100">
-              Projects
-            </a>
+            <Link
+              to="project"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="opacity-60 hover:opacity-100 cursor-pointer"
+            >
+              Project
+            </Link>
           </li>
           <li>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="opacity-60 hover:opacity-100 cursor-pointer"
+            >
               Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="opacity-60 hover:opacity-100">
+            <Link
+              to="social"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="opacity-60 hover:opacity-100 cursor-pointer"
+            >
               Social
-            </a>
+            </Link>
           </li>
         </ul>
-        <a href="#" className="justify-self-end my-5 mx-6 leading-4 font-bold">
+        <Link
+          to="top"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+          className="hidden md:block md:justify-self-end my-5 mx-6 leading-4 font-bold cursor-pointer"
+        >
           <span className="block">Daillan</span>
           <span className="block">Leigh &nbsp; &nbsp;→</span>
           <span className="block">Franco</span>
-        </a>
+        </Link>
       </nav>
     </headers>
   );
