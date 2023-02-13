@@ -124,7 +124,7 @@ const Home = function () {
         {/* About */}
         <section
           id="about"
-          className="h-auto md:px-20 px-3 md:pt-20 md:py-10 grid grid-cols-2 gap-5"
+          className="h-auto md:px-20 px-3 z-10 md:pt-20 md:py-10 grid grid-cols-2 gap-5"
         >
           {/* About Me */}
           <span
