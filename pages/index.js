@@ -2,19 +2,27 @@ import { Arizonia } from "@next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
 import Building from "../public/building.jpg";
+import Stream from "../public/stream.jpg";
+import Autocheck from "../public/autocheck.jpg";
 const alex_brush = Arizonia({ subsets: ["latin"], weight: "400" });
 
 const Home = function () {
+  const router = useRouter();
   const { ref: firstSecRef, inView: secVisible } = useInView();
+  const { ref: aboutRef, inView: aboutVisible } = useInView();
+  const { ref: educRef, inView: educVisible } = useInView();
+  const { ref: projectRef, inView: projectVisible } = useInView();
   return (
     <main className="scroll-smooth">
+      {/* First Section */}
       <section ref={firstSecRef} className="h-screen flex">
         <div className="self-center justify-self-center mx-auto">
           <Image
             src={Building}
             className={`w-72 opacity-40 ${
-              secVisible ? "scale-100 ease-in duration-700" : "scale-150 blur"
+              secVisible ? "scale-100 ease-in duration-1000" : "scale-150 blur"
             }`}
             alt="Building"
           />
@@ -71,23 +79,51 @@ const Home = function () {
         </div>
       </section>
 
+      {/* About */}
       <section
         id="about"
         className="h-screen px-20 pt-20 py-10 grid grid-cols-2 gap-5"
       >
         {/* About Me */}
-        <span className="text-2xl font-bold">(about me)</span>
-        <p className="font-semibold text-justify max-w-5xl text-3xl indent-80">
+        <span
+          ref={aboutRef}
+          className={`text-2xl font-bold ${
+            aboutVisible
+              ? "showAnimation ease-in duration-500"
+              : "hideAnimation"
+          }`}
+        >
+          (about me)
+        </span>
+        <p
+          ref={aboutRef}
+          className={`font-semibold text-justify max-w-5xl text-3xl indent-64 ${
+            aboutVisible
+              ? "showAnimation ease-in duration-500"
+              : "hideAnimation"
+          }`}
+        >
           As a Junior Front-End Developer, I am responsible for maintaining and
           creating a website/web application and the user interface. I'm
           proficient in HTML, CSS, and vanilla JavaScript, which I'll use to
           carry out those tasks. And to enhance my technical skills I put extra
           effort to learn ReactJS, NextJS, and TailwindCSS.
         </p>
-
         {/* Education and Training */}
-        <span className="text-2xl font-bold">(Education and Training)</span>
-        <div className="grid grid-cols-2 gap-4">
+        <span
+          ref={educRef}
+          className={`text-2xl font-bold ${
+            educVisible ? "showAnimation ease-in duration-500" : "hideAnimation"
+          } `}
+        >
+          (Education and Training)
+        </span>
+        <div
+          ref={educRef}
+          className={`grid grid-cols-2 gap-4 ${
+            educVisible ? "showAnimation ease-in duration-500" : "hideAnimation"
+          }`}
+        >
           {/* College */}
           <div>
             <h2 className="text-xl font-bold">College</h2>
@@ -134,6 +170,75 @@ const Home = function () {
       </section>
 
       {/* Projects */}
+      <section className="mt-20 h-screen px-20 pt-20">
+        <h2 className="text-7xl font-bold">◀ Projects</h2>
+
+        <div className="grid grid-cols-2 ">
+          {/* Card 1*/}
+          <div
+            ref={projectRef}
+            className={`justify-self-center max-w-md rounded-xl p-2 bg-neutral-800 mt-10 ${
+              projectVisible
+                ? "showAnimation ease-in duration-500"
+                : "hideAnimation"
+            }`}
+          >
+            <Image src={Stream} className="w-max rounded-xl" alt="stream" />
+            <h4 className="mt-2 text-center text-xl font-semibold py-2">
+              Online To-do App
+            </h4>
+            <p className="px-4">
+              <span className="font-semibold">Description:</span> Stream App is
+              a kind of app that generally used to maintain our day-to-day tasks
+              or list everything that we have to do.
+            </p>
+            <p className="px-4 py-4">
+              <span className="font-semibold">Technologies:</span> JavaScript,
+              TailwindCSS, ReactJS, NextJS, and Firebase/Firestore
+            </p>
+
+            <button
+              onClick={() =>
+                router.push("https://todo-app-beige-kappa.vercel.app/")
+              }
+              className="bg-neutral-700 w-full py-2 rounded-xl text-lg"
+            >
+              Visit Project →
+            </button>
+          </div>
+
+          {/* Card 2*/}
+          <div
+            ref={projectRef}
+            className={`justify-self-center max-w-md rounded-xl p-2 bg-neutral-800 mt-10 ${
+              projectVisible
+                ? "showAnimation ease-in duration-700"
+                : "hideAnimation"
+            }`}
+          >
+            <Image src={Autocheck} className="w-max rounded-xl" alt="stream" />
+            <h4 className="mt-2 text-center text-xl font-semibold py-2">
+              Auto Shop E-commerce
+            </h4>
+            <p className="px-4">
+              <span className="font-semibold">Description:</span> This app is an
+              e-commerce web app in which the user can browse various car parts.
+              They can add items to their cart and then checkout.
+            </p>
+            <p className="px-4 py-4">
+              <span className="font-semibold">Technologies:</span> JavaScript,
+              TailwindCSS, ReactJS, NextJS, and Stripe Checkout
+            </p>
+
+            <button
+              disabled
+              className="bg-neutral-700 w-full py-2 rounded-xl text-lg cursor-not-allowed opacity-40"
+            >
+              Under Production...
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
