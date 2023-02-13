@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.hideAnimation {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+  transition: all 1s;
+}
+.showAnimation {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
