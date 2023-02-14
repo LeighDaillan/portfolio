@@ -234,6 +234,7 @@ const Home = function () {
         {/* Skills */}
         <section
           ref={skillRef}
+          id="skills"
           className={`mt-10 md:mt-20 h-auto px-10 md:px-20 md:pt-20 ${
             skillVisible ? "scale-100 ease-in duration-1000" : "scale-150 blur"
           }`}
