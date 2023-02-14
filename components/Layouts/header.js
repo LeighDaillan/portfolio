@@ -7,11 +7,11 @@ const Header = function () {
   return (
     <headers
       ref={navRef}
-      className={`fixed w-full z-30 bg-neutral-900  ${
+      className={`fixed w-full z-30 bg-neutral-900 ${
         navVisible ? "showAnimation ease-in duration-500" : "hideAnimation "
       }`}
     >
-      <nav className="grid md:grid-cols-2  bg-neutral-900 ">
+      <nav className="grid md:grid-cols-2   ">
         <ul className="text-base  flex justify-between py-5 mx-10 px-4 md:max-w-sm font-bold">
           <li>
             <Link

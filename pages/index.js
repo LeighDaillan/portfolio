@@ -8,6 +8,16 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Building from "../public/building.jpg";
 import Stream from "../public/stream.jpg";
+import React from "../public/Logos/atom.png";
+import Css from "../public/Logos/css.png";
+import Firebase from "../public/Logos/firebase.png";
+import Github from "../public/Logos/github.png";
+import Html from "../public/Logos/html.png";
+import Tailwind from "../public/Logos/tailwind.png";
+import Js from "../public/Logos/js.png";
+import Git from "../public/Logos/git.png";
+import Next from "../public/Logos/next.png";
+import Trello from "../public/Logos/trello.png";
 import Autocheck from "../public/autocheck.jpg";
 const alex_brush = Arizonia({ subsets: ["latin"], weight: "400" });
 
@@ -124,7 +134,7 @@ const Home = function () {
         {/* About */}
         <section
           id="about"
-          className="h-auto md:px-20 px-3 z-10 md:pt-20 md:py-10 grid grid-cols-2 gap-5"
+          className="h-auto md:px-20 px-3 z-10 md:pt-20 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-5"
         >
           {/* About Me */}
           <span
@@ -216,6 +226,99 @@ const Home = function () {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Skills */}
+        <section className="mt-10 md:mt-20 h-auto px-10 md:px-20 md:pt-20">
+          <h2 className="text-xl text-center md:text-3xl lg:text-6xl font-bold">
+            ✦ Skills
+          </h2>
+
+          <div className="flex flex-col md:flex-row justify-center gap-5">
+            {/* Card Frontend skills*/}
+            <div className=" max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
+              <h3 className="text-xl text-center font-semibold">
+                {"</>"} Front End Development
+              </h3>
+              <p className="text-sm text-center text-neutral-400">
+                Less than 1 year
+              </p>
+              <div className="grid grid-cols-3 gap-6 mt-5">
+                <div className="flex flex-col justify-center">
+                  <Image src={Html} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    HTML5
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={Css} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    CSS3
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={Tailwind} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    TailwindCSS
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={Js} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    JavaScript
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={React} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    ReactJS
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={Next} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    NextJS
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card Others */}
+            <div className="max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
+              <h3 className="text-xl text-center font-semibold">⌬ Others</h3>
+              <p className="text-sm text-center text-neutral-400">
+                Acquired Skills
+              </p>
+              <div className="grid grid-cols-3 gap-6 mt-5">
+                <div className="flex flex-col justify-center">
+                  <Image src={Firebase} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    Firebase
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={Git} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    Git
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={Github} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    GitHub
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center">
+                  <Image src={Trello} className="w-14 self-center" />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    Trello
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
         </section>
 
         {/* Projects */}
