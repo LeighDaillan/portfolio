@@ -133,7 +133,6 @@ const Home = function () {
             </div>
           </div>
         </section>
-
         {/* About */}
         <section
           id="about"
@@ -230,106 +229,6 @@ const Home = function () {
             </div>
           </div>
         </section>
-
-        {/* Skills */}
-        <section
-          ref={skillRef}
-          id="skills"
-          className={`mt-10 md:mt-20 py-20 px-10 md:px-20 md:pt-20 ${
-            skillVisible ? "scale-100 ease-in duration-1000" : "scale-150 blur"
-          }`}
-        >
-          <h2 className="text-xl text-center md:text-3xl lg:text-6xl font-bold">
-            ✦ Skills
-          </h2>
-
-          <div className="flex flex-col md:flex-row justify-center gap-5">
-            {/* Card Frontend skills*/}
-            <div className=" max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
-              <h3 className="text-xl text-center font-semibold">
-                {"</>"} Front End Development
-              </h3>
-              <p className="text-sm text-center text-neutral-400">
-                Less than 1 year
-              </p>
-              <div className="grid grid-cols-3 gap-6 mt-5">
-                <div className="flex flex-col justify-center">
-                  <Image src={Html} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    HTML5
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={Css} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    CSS3
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={Tailwind} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    TailwindCSS
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={Js} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    JavaScript
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={React} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    ReactJS
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={Next} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    NextJS
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Card Others */}
-            <div className="max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
-              <h3 className="text-xl text-center font-semibold">⌬ Others</h3>
-              <p className="text-sm text-center text-neutral-400">
-                Acquired Skills
-              </p>
-              <div className="grid grid-cols-3 gap-6 mt-5">
-                <div className="flex flex-col justify-center">
-                  <Image src={Firebase} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    Firebase
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={Git} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    Git
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={Github} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    GitHub
-                  </span>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <Image src={Trello} className="w-14 self-center" />
-                  <span className="text-xs font-semibold self-center mt-2">
-                    Trello
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div></div>
-        </section>
-
         {/* Projects */}
         <section
           id="project"
@@ -343,11 +242,11 @@ const Home = function () {
             ◀ Projects
           </h2>
 
-          <div className={`grid grid-cols-1 md:grid-cols-2 `}>
+          <div className={`md:grid  md:grid-cols-2 `}>
             {/* Card 1*/}
             <div
               ref={projectRef}
-              className={`justify-self-center max-w-md rounded-xl p-2 bg-neutral-800 mt-0 md:mt-10`}
+              className={`justify-self-center max-w-xs md:max-w-md rounded-xl p-2 bg-neutral-800 mt-0 md:mt-10`}
             >
               <Image src={Stream} className="w-max rounded-xl" alt="stream" />
               <h4 className="mt-2 text-center text-xl font-semibold py-2">
@@ -376,7 +275,7 @@ const Home = function () {
             {/* Card 2*/}
             <div
               ref={projectRef}
-              className={`justify-self-center max-w-md rounded-xl p-2 bg-neutral-800 mt-10`}
+              className={`justify-self-center max-w-xs md:max-w-md rounded-xl p-2 bg-neutral-800 mt-10`}
             >
               <Image
                 src={Autocheck}
@@ -419,10 +318,10 @@ const Home = function () {
           <h3 className="text-5xl font-bold"> Get in touch.</h3>
           <h3 className="text-5xl font-bold">Let's work together.</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-10 md:mt-20">
+          <div className="md:grid md:grid-cols-2 mt-10 md:mt-20">
             <div>
               <h4 className="text-3xl ">Inquiries:</h4>
-              <p className="max-w-md">
+              <p className="md:max-w-md">
                 Please fill out the form on the right or email us directly at
                 francodaillanleigh@gmail.com.
                 <br />
@@ -433,7 +332,7 @@ const Home = function () {
             <form
               ref={form}
               onSubmit={contactHandler}
-              className="bg-neutral-800 mt-5 max-w-2xl p-5"
+              className="bg-neutral-800 mt-5 md:max-w-2xl p-5"
             >
               <label>Name: *</label>
               <input
