@@ -235,7 +235,7 @@ const Home = function () {
         <section
           ref={skillRef}
           id="skills"
-          className={`mt-10 md:mt-20 h-auto px-10 md:px-20 md:pt-20 ${
+          className={`mt-10 md:mt-20 py-20 px-10 md:px-20 md:pt-20 ${
             skillVisible ? "scale-100 ease-in duration-1000" : "scale-150 blur"
           }`}
         >
@@ -333,7 +333,7 @@ const Home = function () {
         {/* Projects */}
         <section
           id="project"
-          className={`mt-5 md:mt-20 h-auto px-10 md:px-20 md:pt-20 ${
+          className={`mt-5 md:mt-20 h-screen px-10 md:px-20  ${
             projectVisible
               ? "showAnimation ease-in duration-500"
               : "hideAnimation"
