@@ -133,6 +133,7 @@ const Home = function () {
             </div>
           </div>
         </section>
+
         {/* About */}
         <section
           id="about"
@@ -229,6 +230,146 @@ const Home = function () {
             </div>
           </div>
         </section>
+
+        {/* Skills */}
+        <section
+          ref={skillRef}
+          id="skills"
+          className={`mt-10 md:mt-20 py-20 px-10 md:px-20 md:pt-20 ${
+            skillVisible ? "scale-100 ease-in duration-1000" : "scale-150 blur"
+          }`}
+        >
+          <h2 className="text-xl text-center md:text-3xl lg:text-6xl font-bold">
+            ✦ Skills
+          </h2>
+
+          <div className="flex flex-col md:flex-row justify-center gap-5">
+            {/* Card Frontend skills*/}
+            <div className=" max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
+              <h3 className="text-xl text-center font-semibold">
+                {"</>"} Front End Development
+              </h3>
+              <p className="text-sm text-center text-neutral-400">
+                Less than 1 year
+              </p>
+              <div className="grid grid-cols-3 gap-6 mt-5">
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Html}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    HTML5
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Css}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    CSS3
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Tailwind}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    TailwindCSS
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Js}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    JavaScript
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={React}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    ReactJS
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Next}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    NextJS
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card Others */}
+            <div className="max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
+              <h3 className="text-xl text-center font-semibold">⌬ Others</h3>
+              <p className="text-sm text-center text-neutral-400">
+                Acquired Skills
+              </p>
+              <div className="grid grid-cols-3 gap-6 mt-5">
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Firebase}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    Firebase
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Git}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    Git
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Github}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    GitHub
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Trello}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    Trello
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+        </section>
+
         {/* Projects */}
         <section
           id="project"
