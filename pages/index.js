@@ -333,7 +333,7 @@ const Home = function () {
         {/* Projects */}
         <section
           id="project"
-          className={`mt-5 md:mt-20 h-screen px-10 md:px-20  ${
+          className={`mt-5 md:mt-20 h-auto py-10 px-10 md:px-20  ${
             projectVisible
               ? "showAnimation ease-in duration-500"
               : "hideAnimation"
