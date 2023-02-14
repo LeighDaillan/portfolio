@@ -27,6 +27,9 @@ const Home = function () {
   const { ref: aboutRef, inView: aboutVisible } = useInView();
   const { ref: educRef, inView: educVisible } = useInView();
   const { ref: projectRef, inView: projectVisible } = useInView();
+  const { ref: skillRef, inView: skillVisible } = useInView();
+  const { ref: contactRef, inView: contactVisible } = useInView();
+  const { ref: socialRef, inView: socialVisible } = useInView();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -229,7 +232,12 @@ const Home = function () {
         </section>
 
         {/* Skills */}
-        <section className="mt-10 md:mt-20 h-auto px-10 md:px-20 md:pt-20">
+        <section
+          ref={skillRef}
+          className={`mt-10 md:mt-20 h-auto px-10 md:px-20 md:pt-20 ${
+            skillVisible ? "scale-100 ease-in duration-1000" : "scale-150 blur"
+          }`}
+        >
           <h2 className="text-xl text-center md:text-3xl lg:text-6xl font-bold">
             ✦ Skills
           </h2>
@@ -398,7 +406,15 @@ const Home = function () {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="px-10 md:px-20 md:pt-20 mt-20 h-auto">
+        <section
+          ref={contactRef}
+          id="contact"
+          className={`px-10 md:px-20 md:pt-20 mt-20 h-auto ${
+            contactVisible
+              ? "scale-100 ease-in duration-1000"
+              : "scale-150 blur"
+          }`}
+        >
           <h3 className="text-5xl font-bold"> Get in touch.</h3>
           <h3 className="text-5xl font-bold">Let's work together.</h3>
 
@@ -455,8 +471,13 @@ const Home = function () {
 
         {/* Social */}
         <section
+          ref={socialRef}
           id="social"
-          className="px-10 my-10 md:px-20 md:pt-20 md:my-20 h-auto"
+          className={`px-10 my-10 md:px-20 md:pt-20 md:my-20 h-auto ${
+            socialVisible
+              ? "showAnimation ease-in duration-500"
+              : "hideAnimation"
+          }`}
         >
           <h2 className="text-3xl md:text-5xl font-bold">❛❛ Social</h2>
           <div className="grid grid-cols-3 gap-2 md:grid-cols-5 justify-between md:max-w-2xl mt-5 mb-10 text-xl">
