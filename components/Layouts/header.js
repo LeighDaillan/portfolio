@@ -37,7 +37,18 @@ const Header = function () {
               Project
             </Link>
           </li>
-
+          <li>
+            <Link
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="opacity-60 hover:opacity-100 cursor-pointer"
+            >
+              Skills
+            </Link>
+          </li>
           <li>
             <Link
               to="contact"
