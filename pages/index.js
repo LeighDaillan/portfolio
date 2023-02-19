@@ -530,7 +530,9 @@ const Home = function () {
             <Link href="https://www.linkedin.com/in/daillan-leigh-franco-9b83aa25a/">
               LinkedIn
             </Link>
-            <Link href="https://copper-cammi-87.tiiny.site/">Resume</Link>
+            <Link href="https://docs.google.com/document/d/1RcYmxwDRBrbouV9HWppEh8ImaBHDDxgi/edit?usp=share_link&ouid=104992951854308746214&rtpof=true&sd=true">
+              Resume
+            </Link>
           </div>
         </section>
       </main>
