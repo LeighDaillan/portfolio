@@ -19,6 +19,7 @@ import Git from "../public/Logos/git.png";
 import Next from "../public/Logos/next.png";
 import Trello from "../public/Logos/trello.png";
 import Autocheck from "../public/autocheck.jpg";
+import Arcane from "../public/arcane.jpg";
 const alex_brush = Arizonia({ subsets: ["latin"], weight: "400" });
 
 const Home = function () {
@@ -372,8 +373,9 @@ const Home = function () {
 
         {/* Projects */}
         <section
+          ref={projectRef}
           id="project"
-          className={`mt-5 md:mt-20 h-auto py-10 px-10 md:px-20  ${
+          className={`mt-5 md:mt-20 md:mb-10 h-auto py-10 px-10 md:px-20  ${
             projectVisible
               ? "showAnimation ease-in duration-500"
               : "hideAnimation"
@@ -383,10 +385,9 @@ const Home = function () {
             ◀ Projects
           </h2>
 
-          <div className={`md:grid  md:grid-cols-2 `}>
+          <div className={`md:grid md:gap-10 md:grid-cols-2 lg:grid-cols-3 `}>
             {/* Card 1*/}
             <div
-              ref={projectRef}
               className={`justify-self-center max-w-xs md:max-w-md rounded-xl p-2 bg-neutral-800 mt-0 md:mt-10`}
             >
               <Image src={Stream} className="w-max rounded-xl" alt="stream" />
@@ -415,7 +416,38 @@ const Home = function () {
 
             {/* Card 2*/}
             <div
-              ref={projectRef}
+              className={`justify-self-center max-w-xs md:max-w-md rounded-xl p-2 bg-neutral-800 mt-0 md:mt-10`}
+            >
+              <Image src={Arcane} className="w-max rounded-xl" alt="stream" />
+              <h4 className="mt-2 text-center text-xl font-semibold py-2">
+                Arcane Shop
+              </h4>
+              <p className="px-4">
+                <span className="font-semibold">Description:</span> In this
+                store, you can purchase clothing, electronics, and jewelry. You
+                can check out by adding the chosen items to your shopping cart.
+              </p>
+              <p className="px-4 py-4">
+                <span className="font-semibold">Technologies:</span> JavaScript,
+                TailwindCSS, ReactJS, NextJS, Firebase/Firestore, and Stripe
+              </p>
+
+              <p className="px-4 ">
+                <span className="font-semibold">WARNING:</span> This website is
+                still under production but you can visit it now by clicking the
+                button below.
+              </p>
+
+              <button
+                onClick={() => router.push("https://arcane-shop.vercel.app/")}
+                className="bg-neutral-700 w-full py-2 rounded-xl text-lg"
+              >
+                Visit Project →
+              </button>
+            </div>
+
+            {/* Card 3*/}
+            <div
               className={`justify-self-center max-w-xs md:max-w-md rounded-xl p-2 bg-neutral-800 mt-10`}
             >
               <Image
@@ -450,7 +482,7 @@ const Home = function () {
         <section
           ref={contactRef}
           id="contact"
-          className={`px-10 md:px-20 md:pt-20 mt-20 h-auto ${
+          className={`px-10 md:px-20 md:pt-10 mt-10 h-auto ${
             contactVisible
               ? "scale-100 ease-in duration-1000"
               : "scale-150 blur"
