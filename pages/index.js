@@ -20,6 +20,8 @@ import Next from "../public/Logos/next.png";
 import Trello from "../public/Logos/trello.png";
 import Autocheck from "../public/autocheck.jpg";
 import Arcane from "../public/arcane.jpg";
+import Mysql from "../public/Logos/mysql.png";
+import Php from "../public/Logos/php.png";
 const alex_brush = Arizonia({ subsets: ["latin"], weight: "400" });
 
 const Home = function () {
@@ -250,9 +252,7 @@ const Home = function () {
               <h3 className="text-xl text-center font-semibold">
                 {"</>"} Front End Development
               </h3>
-              <p className="text-sm text-center text-neutral-400">
-                Less than 1 year
-              </p>
+
               <div className="grid grid-cols-3 gap-6 mt-5">
                 <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
                   <Image
@@ -317,13 +317,34 @@ const Home = function () {
               </div>
             </div>
 
-            {/* Card Others */}
-            <div className="max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
-              <h3 className="text-xl text-center font-semibold">⌬ Others</h3>
-              <p className="text-sm text-center text-neutral-400">
-                Acquired Skills
-              </p>
+            {/* Card Backend skills*/}
+            <div className=" max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
+              <h3 className="text-xl text-center font-semibold">
+                {"</>"} Back End Development <br />
+                and Databases
+              </h3>
+
               <div className="grid grid-cols-3 gap-6 mt-5">
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Php}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    PHP
+                  </span>
+                </div>
+                <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
+                  <Image
+                    src={Mysql}
+                    className="w-14 self-center"
+                    alt="progamming lanuage"
+                  />
+                  <span className="text-xs font-semibold self-center mt-2">
+                    MySQL
+                  </span>
+                </div>
                 <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
                   <Image
                     src={Firebase}
@@ -334,6 +355,16 @@ const Home = function () {
                     Firebase
                   </span>
                 </div>
+              </div>
+            </div>
+
+            {/* Card Others */}
+            <div className="max-w-md rounded-xl py-5 px-10 bg-neutral-800 mt-0 md:mt-10">
+              <h3 className="text-xl text-center font-semibold">⌬ Others</h3>
+              <p className="text-sm text-center text-neutral-400">
+                Acquired Skills
+              </p>
+              <div className="grid grid-cols-3 gap-6 mt-5">
                 <div className="flex flex-col justify-center ease-in duration-200 hover:scale-110">
                   <Image
                     src={Git}
